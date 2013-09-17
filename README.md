@@ -14,7 +14,7 @@ The platform is initially focused on building easily distributable tools to gath
 We have big goals, and need help to accomplish them. We're looking for local political organizations, developers, behavioral and political psychologists, governments and NGOs to engage. 
 
 ### Share your data.
-If you're using our tools for your local elections, please send us a link to your google docs with the politician data. The hardest part of establishing something that can be useful on a national level is aggregating the data itself. There is a document in our repository called datasources that we are maintaining, please add a link to your published data templates and submit a pull request. 
+If you're using our tools for your local elections, please send us a link to your google docs with the politician data. The hardest part of establishing something that can be useful on a national level is aggregating the data itself. There is a document stored with each tool in the repository called datasources that we are maintaining, please update it with information about your data and submit a pull request. 
 
 ### Contribute Code 
 We're a small team and can always use help. We can use help with development, identifying key data, and ways of analyzing data. Our development focuses on building lightweight client side tools using AngularJS. We would like to make our tools more usable and create both data entry and presentation tools around common spreadsheet formats. The spreadsheets are easy to work and modify as we experiment with what data to store and how to structure it.  
