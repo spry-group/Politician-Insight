@@ -9,28 +9,30 @@
 
 
   <style>
-    #candidate-selector { display: inline-block; margin-top: 1em; }
-    #candidates li { display: inline-block; width: 125px; background-color: #ccc; margin: 5px; padding: 10px;  text-align: center;}
+    body { font: 1em sans-serif; }
+    #candidate-selector { margin-top: 1em; }
+    #candidates li { display: inline-block; width: 125px; background-color: #999; margin: 5px; padding: 10px;  text-align: center;}
     #candidates li img { text-align: center; }
-    #candidates li.selected { background-color: #6b294b; !important; color: #fff; }
-    #issue-selector { display: inline-block; vertical-align: top; margin-top: 1em; }
+    #candidates li.selected { background-color: #38761D; !important; color: #fff; }
+    #issue-selector { vertical-align: top; margin-top: 1em; }
     #issues { nowrap; vertical-align: middle; }
-    #issues li { white-space: normal; display: inline-block;  width: 125px; height: 54px; margin: 5px; padding: 10px; background-color: #ccc; text-align: center; vertical-align: middle;}
-    #issues li.selected { background-color: #6b294b; color: #fff;}
+    #issues li { white-space: normal; display: inline-block;  width: 125px; height: 54px; margin: 5px; padding: 10px; background-color: #999; text-align: center; vertical-align: middle;}
+    #issues li.selected { background-color: #38761d; color: #fff;}
     table {  vertical-align: top; overflow-x: scroll; }
-    th { border-bottom: 4px solid #000; width: 24em; vertical-align: bottom; }
-    th.issue { width: 6em; }
-    td { border-bottom: 1px solid #ccc; padding: 0.5em; width: 24em;  vertical-align: top; }
-    td.category { color: #6b294b; text-decoration: underline; font-weight: bold; font-size: 1.1em; border: none; padding-top: 0.8em; max-width: 6em; }
-    td.issue { padding-left: 2em; width: 6em; }
+    th { border-bottom: 4px solid #000; width: 20em; vertical-align: bottom; }
+    th.issue { width: 20em; }
+    td { border-bottom: 1px solid #ccc; padding: 0.5em; width: 20em;  vertical-align: top; }
+    td.category { color: #6b294b; text-decoration: underline; font-weight: bold; font-size: 1.1em; border: none; padding-top: 0.8em; }
+    td.issue { padding-left: 2em; width: 20em; }
   </style>
 </head>
 
 <body>
   <div ng-app="App">
+    <h1>On The Issues</h1>
     <div ng-controller="OnTheIssuesContoller">
       <div id="candidate-selector">
-        <h1>Candidates</h1>
+        <h2>Candidates</h2>
         <p>Click a candidate to see the candidate in the comparison table.</p>
         <ul id="candidates">
           <li  ng-repeat="candidate in candidates.data"  ng-click="candidate.selected = !candidate.selected" ng-class="{ selected: candidate.selected }">
@@ -40,7 +42,7 @@
       </div>
 
       <div id="issue-selector">
-        <h1>Issues</h1>
+        <h2>Issues</h2>
         <p>Click an issue to see it in the comparison table.</p>
         <ul id="issues">
           <li  ng-repeat="category in issues.data"  ng-click="category.selected = !category.selected" ng-class="{ selected: category.selected }">
@@ -49,13 +51,13 @@
         </ul>
       </div>
 
-      <h1 style="margin-top: 1em;">Comparison</h1>
+      <h2 style="margin-top: 1em;">Comparison</h2>
       Click on an issue heading to remove it from the table.
       <div class="scroller">
         <table id="comparison">
             <thead>
                 <th class="issue">Issues</th>
-                <th ng-repeat="candidate in candidates.data ">
+                <th ng-repeat="candidate in candidates.data | filter: { selected: true} ">
                    <div><img src="{{candidate.pic}}" /><br />{{candidate.firstname}}<br />{{candidate.lastname}}</div>
                 </th>
             </thead>
@@ -74,9 +76,8 @@
             </tbody>
         </table>
         
-        <div style="font-size: 1.2em; margin-top: 1em; margin-bottom: 1em;" >
-            <div><a href="http://spry-group.com/"><img src="http://www.spry-group.com/images/SpryGroupLogo-wide-40pxTall-72dpi.png" alt="The Spry Group Logo" /></a></div>
-            <div>&quot;On the Issues&quot; was developed in partnership with <a href='http://DecideNYC.com' target='_blank'>Decide NYC</a>.</div>
+        <div style="margin-top: 3em; border-top: 1px solid black;" >
+            <div><strong>&quot;On the Issues&quot;</strong> was developed by <a href="http://spry-group.com/" target="_blank">The Spry Group</a> in partnership with <a href='http://DecideNYC.com' target='_blank'>Decide NYC</a>.</div>
         </div>
       </div>
     </div>

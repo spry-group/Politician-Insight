@@ -1,4 +1,4 @@
-var documentKey = '0AgzkULHq1yvxdHZkRktpd2gxT1diaDQ2OU5WTXZHVUE';
+var documentKey = '0AgzkULHq1yvxdFdXbF9FVU1tZ0U0UmVTRjgzNkhZd3c';
 var myapp = angular.module('App', []);
 myapp.factory('issues', function($http) {
     var url = "https://docs.google.com/spreadsheet/pub?key=" + documentKey +"&single=true&gid=1&output=csv";
@@ -49,6 +49,7 @@ myapp.factory('candidates', function($http) {
 
         for (var i = 1; i < rows.length; i++) //Init i to 1 to skip first row with headers.
         {
+       
             var firstname = rows[i][0];
             var lastname =   rows[i][1];
             var party =   rows[i][2];
