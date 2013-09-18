@@ -23,7 +23,5 @@ Fork our code and send us pull requests if you have some changes you think we sh
 ### Data
 Submit a pull request with a reference to your data set added to the datasources.csv file. 
 
-
-
-
-
+-----------------------------------------------
+"On the Issues" was initially built for [DecideNYC](http://decidenyc.com) to help educate voters in New York about candidates in the 2013 Mayoral Election. If you're interested in NYC politics they're an excellent resource for information regarding the various races and candidates.
