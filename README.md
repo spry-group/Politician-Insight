@@ -27,3 +27,15 @@ If you're not able to directly engage in the project and want to help, you can l
 
 ### Sponsor our Work!
 We want to build a national platform. If we are going build something that is a civic resource available to the voting public for free that is sustainable we have to capitalize it. If you know of an organization we should contact or of a grant we should apply for, please let us know. If your organization's mission is aligned please reach out to us! We're looking for organizations willing to sponsor our project and hopefully a non-partisan organization willing to become the steward of the larger data pool. 
+
+## Contact Us!
+
+[politician-insight@spry-group.com](mailto:politician-insight@spry-group.com)
+ 
+Attn: Politician Insight  
+c/o The Spry Group, LLC.  
+996 Hancock Street  
+Brooklyn, NY 11221  
+
+[+001 (718) 355-9767](tel:+17183559767)
+
